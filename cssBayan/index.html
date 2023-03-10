@@ -5,38 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
     <title>CSS Bayan</title>
 </head>
 
-<body>
+<body class="body">
+    <svg style="display: none">
+        <symbol viewBox="0 0 16 16" id="cross">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
+                fill="#000"></path>
+        </symbol>
+    </svg>
     <section class="container">
         <h1 class="title">CSS Bayan</h1>
         <div class="bayan">
             <ul class="bayan-list">
                 <li class="bayan-item">
-                </li>
-                <li class="bayan-item">
-                    <h2 class="meme-title"></h2>
+                    <div class="line">
+                        <h2 class="meme-title">This is mistake</h2>
+                        <svg class="svg" width="32" height="32">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
+
                     <div class="image">
-                        <img src="" alt="">
+                        <img src="./images/cat.jpg" alt="meme">
                     </div>
                 </li>
                 <li class="bayan-item">
-                    <h2 class="meme-title"></h2>
+                    <div class="line">
+                        <h2 class="meme-title">Types in js</h2>
+                        <svg class="svg" width="32" height="32">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
+
                     <div class="image">
-                        <img src="" alt="">
+                        <img src="./images/cats.jpg" alt="meme">
                     </div>
                 </li>
                 <li class="bayan-item">
-                    <h2 class="meme-title"></h2>
+                    <div class="line">
+                        <h2 class="meme-title">About the technical task</h2>
+                        <svg class="svg" width="32" height="32">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
                     <div class="image">
-                        <img src="" alt="">
+                        <img src="./images/man.webp" alt="meme">
                     </div>
                 </li>
                 <li class="bayan-item">
-                    <h2 class="meme-title"></h2>
+                    <div class="line">
+                        <h2 class="meme-title">Last commit</h2>
+                        <svg class="svg" width="32" height="32">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
                     <div class="image">
-                        <img src="" alt="">
+                        <img src="./images/mem.jpg" alt="meme">
+                    </div>
+                </li>
+                <li class="bayan-item">
+                    <div class="line">
+                        <h2 class="meme-title">Js for kids</h2>
+                        <svg class="svg" width="32" height="32">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </div>
+                    <div class="image">
+                        <img src="./images/kids.webp" alt="meme">
                     </div>
                 </li>
             </ul>
