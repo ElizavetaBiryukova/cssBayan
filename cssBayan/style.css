@@ -17,7 +17,7 @@
 }
 
 .container {
-    max-width: 1140em;
+    max-width: 100em;
     margin: auto;
 }
 
@@ -27,6 +27,15 @@
 
 .meme-title {
     font-size: 1em;
+    color: rgb(34, 34, 202);
+    transition: color 1s ease;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+input {
+    appearance: none;
 }
 
 .bayan-list {
@@ -38,26 +47,84 @@
 
 .bayan-item {
     border-top: 2px solid black;
-    padding-bottom: 1.5em;
-
 }
 
 .line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0.5em;
 }
 
 .svg {
     width: 1.5em;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .image {
     width: max-content;
     margin: auto;
+    opacity: 0;
+    transition: all 2s ease;
+    padding-bottom: 1em;
+    margin-bottom: -2.5em;
 }
 
-.image img{
+img {
     width: 15em;
+    display: none;
+}
+
+.bayan-item input:checked+.image {
+    opacity: 1;
+    transition: all 2s ease;
+    margin-bottom: 0.5em;
+}
+
+.bayan-item input:checked+.image img{
+    display: block;
+}
+
+.container:hover .meme-title {
+    color: black;
+}
+
+.container:hover .svg {
+    color: black;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+
+
+@media (min-width: 820px) {
+    .body {
+        margin: 3em 9em;
+    }
+
+    .image img {
+        width: 25em;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .meme-title {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 820px) {
+    .image img {
+        width: 30em;
+    }
+
+    .title {
+        font-size: 4em;
+    }
+
+    .meme-title {
+        font-size: 2em;
+    }
 }
