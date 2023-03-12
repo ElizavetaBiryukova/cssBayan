@@ -25,17 +25,13 @@
     font-size: 2.5em;
 }
 
-.meme-title {
-    font-size: 1em;
-    color: rgb(34, 34, 202);
-    transition: color 1s ease;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
 input {
     appearance: none;
+    display: none;
+}
+
+.bayan {
+    cursor: pointer;
 }
 
 .bayan-list {
@@ -46,28 +42,44 @@ input {
 }
 
 .bayan-item {
-    border-top: 2px solid black;
+    border-top: 0.1em solid black;
+    cursor: pointer;
+}
+
+.label {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    cursor: pointer;
 }
 
 .line {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.svg {
-    width: 1.5em;
+.cross {
+    font-size: 2em;
     opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.meme-title {
+    font-size: 1em;
+    color: rgb(34, 34, 202);
+}
+
+.container:hover .cross {
+    opacity: 1;
     transition: all 1s ease;
 }
 
-.image {
-    width: max-content;
-    margin: auto;
-    opacity: 0;
-    transition: all 2s ease;
-    padding-bottom: 1em;
-    margin-bottom: -2.5em;
+.container:hover .meme-title {
+    color: black;
+    transition: all 1s ease;
 }
 
 img {
@@ -75,34 +87,71 @@ img {
     display: none;
 }
 
-.bayan-item input:checked+.image {
-    opacity: 1;
-    transition: all 2s ease;
+input:checked~.label img {
+    display: inline;
+    transition: opacity 2s ease;
     margin-bottom: 0.5em;
 }
 
-.bayan-item input:checked+.image img{
-    display: block;
+.image {
+    width: max-content;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 
-.container:hover .meme-title {
-    color: black;
-}
-
-.container:hover .svg {
-    color: black;
+input:checked~.label .image {
     opacity: 1;
-    transition: all 1s ease;
 }
 
+input:checked~.label .line .cross {
+    transform: rotate(45deg);
+}
 
+input:checked~.label .line .meme-title {
+    color: black;
+}
+
+.bayan-item:hover img {
+    display: inline;
+    transition: opacity 2s ease;
+    margin-bottom: 0.5em;
+}
+
+.bayan-item:hover .image {
+    opacity: 1;
+}
+
+.bayan-item:hover .cross {
+    transform: rotate(45deg);
+}
+
+.bayan-item:active .cross {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:active .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:focus .cross {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:focus .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
 
 @media (min-width: 820px) {
     .body {
         margin: 3em 9em;
     }
 
-    .image img {
+    img {
         width: 25em;
     }
 
@@ -115,8 +164,8 @@ img {
     }
 }
 
-@media (min-width: 820px) {
-    .image img {
+@media (min-width: 1920px) {
+    img {
         width: 30em;
     }
 

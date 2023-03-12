@@ -11,78 +11,73 @@
 </head>
 
 <body class="body">
-    <svg style="display: none">
-        <symbol viewBox="0 0 16 16" id="cross">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
-                fill="#000"></path>
-        </symbol>
-    </svg>
     <section class="container">
         <h1 class="title">CSS Bayan</h1>
         <div class="bayan">
             <ul class="bayan-list">
                 <li class="bayan-item">
-                    <div class="line">
-                        <label class="meme-title" for="one">This is mistake</label>
-                        <svg class="svg" width="32" height="32">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </div>
                     <input type="radio" id="one" name="meme" checked="checked">
-                    <div class="image">
-                        <img src="./images/cat.jpg" alt="meme">
-                    </div>
+                    <label class="label" for="one">
+                        <span class="line">
+                            <span class="meme-title">This is mistake</span>
+                            <span class="cross">+</span>
+                        </span>
+                        <span class="image">
+                            <img src="./images/cat.jpg" alt="meme">
+                        </span>
+                    </label>
                 </li>
+
                 <li class="bayan-item">
-                    <div class="line">
-                        <label class="meme-title" for="two">Types in js</label>
-                        <svg class="svg" width="32" height="32">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </div>
                     <input type="radio" name="meme" id="two">
-                    <div class="image">
-                        <img src="./images/cats.jpg" alt="meme">
-                    </div>
+                    <label class="label" for="two">
+                        <span class="line">
+                            <span class="meme-title">Types in js</span>
+                            <span class="cross">+</span>
+                        </span>
+                        <span class="image">
+                            <img src="./images/cats.jpg" alt="meme">
+                        </span>
+                    </label>
                 </li>
+
                 <li class="bayan-item">
-                    <div class="line">
-                        <label class="meme-title" for="three">About the technical task</label>
-                        <svg class="svg" width="32" height="32">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </div>
                     <input type="radio" name="meme" id="three">
-                    <div class="image">
-                        <img src="./images/man.webp" alt="meme">
-                    </div>
+                    <label class="label" for="three">
+                        <span class="line">
+                            <span class="meme-title">About the technical task</span>
+                            <span class="cross">+</span>
+                        </span>
+                        <span class="image">
+                            <img src="./images/man.webp" alt="meme">
+                        </span>
+                    </label>
                 </li>
-                <li class="bayan-item">
-                    <div class="line">
 
-                        <label class="meme-title" for="four">Last commit</label>
-                        <svg class="svg" width="32" height="32">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </div>
+                <li class="bayan-item">
                     <input type="radio" name="meme" id="four">
-                    <div class="image">
-                        <img src="./images/mem.jpg" alt="meme">
-                    </div>
+                    <label class="label" for="four">
+                        <span class="line">
+                            <span class="meme-title">Last commit</span>
+                            <span class="cross">+</span>
+                        </span>
+                        <span class="image">
+                            <img src="./images/mem.jpg" alt="meme">
+                        </span>
+                    </label>
                 </li>
-                <li class="bayan-item">
-                    <div class="line">
 
-                        <label class="meme-title" for="five">Js for kids</label>
-                        <svg class="svg" width="32" height="32">
-                            <use xlink:href="#cross"></use>
-                        </svg>
-                    </div>
+                <li class="bayan-item">
                     <input type="radio" name="meme" id="five">
-                    <div class="image">
-                        <img src="./images/kids.webp" alt="meme">
-                    </div>
+                    <label class="label" for="five">
+                        <span class="line">
+                            <span class="meme-title">Js for kids</span>
+                            <span class="cross">+</span>
+                        </span>
+                        <span class="image">
+                            <img src="./images/kids.webp" alt="meme">
+                        </span>
+                    </label>
                 </li>
             </ul>
         </div>
