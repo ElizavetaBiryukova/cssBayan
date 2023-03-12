@@ -136,6 +136,10 @@ input:checked~.label .line .meme-title {
     transition: none;
 }
 
+.bayan-item:active img {
+    opacity: 0.5;
+}
+
 .bayan-item:focus .cross {
     color: rgb(34, 34, 202);
     transition: none;
