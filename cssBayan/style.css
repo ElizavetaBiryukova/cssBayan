@@ -63,23 +63,13 @@ input {
 
 .cross {
     font-size: 2em;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease;
 }
 
 .meme-title {
     font-size: 1em;
     color: rgb(34, 34, 202);
-}
-
-.container:hover .cross {
-    opacity: 1;
-    transition: all 1s ease;
-}
-
-.container:hover .meme-title {
-    color: black;
-    transition: all 1s ease;
 }
 
 img {
@@ -100,16 +90,16 @@ input:checked~.label img {
     transition: opacity 2s ease;
 }
 
+input:checked~.label .line .meme-title {
+    color: black;
+}
+
 input:checked~.label .image {
     opacity: 1;
 }
 
 input:checked~.label .line .cross {
     transform: rotate(45deg);
-}
-
-input:checked~.label .line .meme-title {
-    color: black;
 }
 
 .bayan-item:hover img {
@@ -177,7 +167,28 @@ input:checked~.label .line .meme-title {
         font-size: 4em;
     }
 
+    .cross {
+        font-size: 2em;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .container:hover .cross {
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    .container:hover .meme-title {
+        color: black;
+        transition: all 1s ease;
+    }
+
     .meme-title {
         font-size: 2em;
+    }
+
+    .bayan-item:active .meme-title {
+        color: rgb(34, 34, 202);
+        transition: none;
     }
 }
