@@ -1,0 +1,209 @@
+@font-face {
+    font-family: FredokaOne;
+    font-display: swap;
+    src: url("./fonts/FredokaOne-Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.body {
+    background-color: rgba(217, 237, 254, 0.291);
+    font-family: "FredokaOne", "Arial", sans-serif;
+    color: black;
+    font-size: 1em;
+    font-weight: 400;
+    min-height: 100%;
+    margin: 3em;
+}
+
+.container {
+    max-width: 100em;
+    margin: auto;
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+input {
+    appearance: none;
+    display: none;
+}
+
+.bayan {
+    cursor: pointer;
+}
+
+.bayan-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.bayan-item {
+    border-top: 0.1em solid black;
+    cursor: pointer;
+}
+
+.label {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    cursor: pointer;
+}
+
+.line {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cross {
+    font-size: 2em;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.meme-title {
+    font-size: 1em;
+    color: rgb(34, 34, 202);
+}
+
+img {
+    width: 15em;
+    display: none;
+}
+
+input:checked~.label img {
+    display: inline;
+    transition: opacity 2s ease;
+    margin-bottom: 0.5em;
+}
+
+.image {
+    width: max-content;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+input:checked~.label .line .meme-title {
+    color: black;
+}
+
+input:checked~.label .image {
+    opacity: 1;
+}
+
+input:checked~.label .line .cross {
+    transform: rotate(45deg);
+}
+
+.bayan-item:active .cross {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:active .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:active img {
+    opacity: 0.5;
+}
+
+.bayan-item:focus .cross {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:focus .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+.bayan-item:active .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
+@media (min-width: 820px) {
+    .body {
+        margin: 3em 9em;
+    }
+
+    img {
+        width: 25em;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .meme-title {
+        font-size: 1.5em;
+    }
+
+    .cross {
+        font-size: 2em;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+}
+
+@media (min-width: 1920px) {
+    img {
+        width: 30em;
+    }
+
+    .title {
+        font-size: 4em;
+    }
+
+    .meme-title {
+        font-size: 2em;
+    }
+
+    .bayan-item:active .meme-title {
+        color: rgb(34, 34, 202);
+        transition: none;
+    }
+
+}
+
+@media (hover: hover) {
+
+    .bayan-item:hover img {
+        display: inline;
+        transition: opacity 2s ease;
+        margin-bottom: 0.5em;
+    }
+
+    .bayan-item:hover .image {
+        opacity: 1;
+    }
+
+    .bayan-item:hover .cross {
+        transform: rotate(45deg);
+    }
+
+    .container:hover .cross {
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    .container:hover .meme-title {
+        color: black;
+        transition: all 1s ease;
+    }
+
+    .bayan-item:active .meme-title {
+        color: rgb(34, 34, 202);
+        transition: none;
+    }
+
+}
