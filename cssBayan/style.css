@@ -102,20 +102,6 @@ input:checked~.label .line .cross {
     transform: rotate(45deg);
 }
 
-.bayan-item:hover img {
-    display: inline;
-    transition: opacity 2s ease;
-    margin-bottom: 0.5em;
-}
-
-.bayan-item:hover .image {
-    opacity: 1;
-}
-
-.bayan-item:hover .cross {
-    transform: rotate(45deg);
-}
-
 .bayan-item:active .cross {
     color: rgb(34, 34, 202);
     transition: none;
@@ -140,6 +126,11 @@ input:checked~.label .line .cross {
     transition: none;
 }
 
+.bayan-item:active .meme-title {
+    color: rgb(34, 34, 202);
+    transition: none;
+}
+
 @media (min-width: 820px) {
     .body {
         margin: 3em 9em;
@@ -156,6 +147,12 @@ input:checked~.label .line .cross {
     .meme-title {
         font-size: 1.5em;
     }
+
+    .cross {
+        font-size: 2em;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -167,10 +164,31 @@ input:checked~.label .line .cross {
         font-size: 4em;
     }
 
-    .cross {
+    .meme-title {
         font-size: 2em;
-        opacity: 0;
-        transition: opacity 1s ease;
+    }
+
+    .bayan-item:active .meme-title {
+        color: rgb(34, 34, 202);
+        transition: none;
+    }
+
+}
+
+@media (hover: hover) {
+
+    .bayan-item:hover img {
+        display: inline;
+        transition: opacity 2s ease;
+        margin-bottom: 0.5em;
+    }
+
+    .bayan-item:hover .image {
+        opacity: 1;
+    }
+
+    .bayan-item:hover .cross {
+        transform: rotate(45deg);
     }
 
     .container:hover .cross {
@@ -183,12 +201,9 @@ input:checked~.label .line .cross {
         transition: all 1s ease;
     }
 
-    .meme-title {
-        font-size: 2em;
-    }
-
     .bayan-item:active .meme-title {
         color: rgb(34, 34, 202);
         transition: none;
     }
+
 }
